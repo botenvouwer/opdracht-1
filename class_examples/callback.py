@@ -24,3 +24,11 @@ class VerkoopSet:
     def walk_verkoop_set(self, callback: callable):
         for verkoop in self.verkoop_list:
             callback(verkoop)
+
+    def __len__(self):
+        return len(self.verkoop_list)
+
+    def __iter__(self):
+        for verkoop in self.verkoop_list:
+            yield verkoop
+
